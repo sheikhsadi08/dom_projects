@@ -6,9 +6,11 @@ function rgbGenerator() {
     const green = Math.floor(Math.random() * 254);
     const blue = Math.floor(Math.random() * 254);
 
-// change background & button rgb color   
-    document.body.style.backgroundColor = `rgb(${red},${green} ,${blue})`;
+// change background & button hexadecimal color  
+    const hexCode = `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`
+    document.body.style.backgroundColor = hexCode;
     document.getElementById('btn').style.backgroundColor = `rgb(${green},${red} ,${blue})`;
+    document.getElementById('hexCode').value = hexCode;
 }
 
 //  2. select button
